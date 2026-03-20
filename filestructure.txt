@@ -1,0 +1,37 @@
+|-- .env
+|-- .gitignore
+|-- eslint.config.js
+|-- index.html
+|-- package-lock.json
+|-- package.json
+|-- postcss.config.js
+|-- public
+    |-- favicon.svg
+    |-- icons.svg
+|-- README.md
+|-- src
+    |-- api
+        |-- traderApi.js
+    |-- App.css
+    |-- App.jsx
+    |-- assets
+        |-- hero.png
+        |-- react.svg
+        |-- vite.svg
+    |-- components
+        |-- AccountBar.jsx
+        |-- ConfigField.jsx
+        |-- ControlButtons.jsx
+        |-- NavBar.jsx
+        |-- PositionCard.jsx
+        |-- SessionHistoryTable.jsx
+        |-- SignalBadge.jsx
+        |-- SignalTable.jsx
+        |-- TradeTable.jsx
+    |-- index.css
+    |-- main.jsx
+    |-- pages
+        |-- Configure.jsx
+        |-- Dashboard.jsx
+|-- tailwind.config.js
+|-- vite.config.js
