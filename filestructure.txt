@@ -1,4 +1,3 @@
-|-- .env
 |-- .gitignore
 |-- eslint.config.js
 |-- index.html
@@ -34,4 +33,5 @@
         |-- Configure.jsx
         |-- Dashboard.jsx
 |-- tailwind.config.js
+|-- vercel.json
 |-- vite.config.js
