@@ -21,7 +21,7 @@ export default function ConfigField({
       <div className="flex items-start justify-between gap-4 py-3 border-b border-border/50 last:border-0">
         <div className="flex-1 min-w-0">
           <p className="font-mono text-xs text-text tracking-wide">{label}</p>
-          {description && <p className="text-xs text-dim mt-0.5 font-body">{description}</p>}
+          {description && <p className="text-xs text-dim mt-0.5 font-body leading-relaxed">{description}</p>}
         </div>
         <button
           type="button"
@@ -29,9 +29,7 @@ export default function ConfigField({
           aria-checked={value}
           onClick={() => onChange(name, !value)}
           className={`relative shrink-0 w-10 h-5 rounded-full transition-all duration-200 border ${
-            value
-              ? 'bg-accentDim border-accent/40'
-              : 'bg-muted border-border'
+            value ? 'bg-accentDim border-accent/40' : 'bg-muted border-border'
           }`}
         >
           <span className={`absolute top-0.5 w-4 h-4 rounded-full transition-all duration-200 ${
@@ -44,10 +42,10 @@ export default function ConfigField({
 
   return (
     <div className="py-3 border-b border-border/50 last:border-0">
-      <div className="flex items-center justify-between gap-4">
+      <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2">
         <div className="flex-1 min-w-0">
           <p className="font-mono text-xs text-text tracking-wide">{label}</p>
-          {description && <p className="text-xs text-dim mt-0.5 font-body">{description}</p>}
+          {description && <p className="text-xs text-dim mt-0.5 font-body leading-relaxed">{description}</p>}
         </div>
         <div className="relative shrink-0">
           {prefix && (
@@ -62,8 +60,8 @@ export default function ConfigField({
             min={min}
             max={max}
             step={step}
-            onChange={e => onChange(name, type === 'number' ? parseFloat(e.target.value) : e.target.value)}
-            className={`w-44 bg-bg border border-border rounded px-3 py-1.5 font-mono text-xs text-text
+            onChange={e => onChange(name, parseFloat(e.target.value))}
+            className={`w-full sm:w-44 bg-bg border border-border rounded px-3 py-2 font-mono text-xs text-text
               focus:outline-none focus:border-accent focus:shadow-glowSm transition-all
               ${prefix ? 'pl-6' : ''}
             `}
